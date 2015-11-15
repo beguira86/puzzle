@@ -18,8 +18,8 @@ resources :stash
 #game routes
 get "/game" , to: "games#index"
 post "/game" , to: "games#save"
-#            GET    /game/puzzle/:id(.:format) game#index
-#            POST   /game/puzzle/:id(.:format) game#save
+get  "/game/:id", to: "games#index"
+#            POST   /game/puzzle/:id games#save
 
 #REGISTRATION CONTROLLER
 post "/signup", to: "registrations#create"
