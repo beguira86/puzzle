@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 	def index
-		@games = Game.where(puzzle_id: params[:id]).order("time").limit(10)
+		@games = Game.where(puzzle_id: params[:id])   #.order("time").limit(10)
 		render "index.json.jbuilder", status: :ok
 	end
 
